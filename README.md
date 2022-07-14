@@ -22,7 +22,8 @@ Hiroyasu Akada, Jian Wang, Soshi Shimada, Masaki Takahashi, Christian Theobalt, 
 
 - Python 3.7
 - Ubuntu 18.04
-- PyTorch 1.6.0 with GPU support (cuda 10.1 is tested to work)
+- PyTorch 1.6.0
+- Cuda 10.1
 
 
 # Training
