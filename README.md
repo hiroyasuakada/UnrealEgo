@@ -25,6 +25,9 @@ Hiroyasu Akada, Jian Wang, Soshi Shimada, Masaki Takahashi, Christian Theobalt, 
 - PyTorch 1.6.0
 - Cuda 10.1
 
+# Dataset
+
+Please see [our project page](https://4dqv.mpi-inf.mpg.de/UnrealEgo/) for the UnrealEgo dataset.
 
 # Training
 
