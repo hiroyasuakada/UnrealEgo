@@ -20,5 +20,5 @@ python train.py \
     --lr 1e-3 \
     --batch_size 16 \
 \
-    --path_to_trained_heatmap ./log/unrealego_heatmap_shared_B16_epoch5-5/best_net_HeatMap.pth \
+    --path_to_trained_heatmap ./log/unrealego_heatmap_shared_B16/best_net_HeatMap.pth \
 

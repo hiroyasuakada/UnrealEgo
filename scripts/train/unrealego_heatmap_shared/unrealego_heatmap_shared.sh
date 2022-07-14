@@ -3,7 +3,7 @@
 # script
 python train.py \
     --project_name UnrealEgoPose \
-    --experiment_name unrealego_heatmap_shared_B16_epoch5-5 \
+    --experiment_name unrealego_heatmap_shared_B16 \
     --model unrealego_heatmap_shared \
 \
 \
