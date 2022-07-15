@@ -67,6 +67,46 @@ We provide metadata for each frame:
 - json: json file with camera and pose information 
 - all_data_with_img-256_hm-64_pose-16_npy: this contains data used for faster training, including rgb images, heatmaps, and pelvis-relative 3D pose. See our [dataloader](https://github.com/hiroyasuakada/UnrealEgo/blob/e3ba929345eb71f27bac1ce8d97e25e106cc3d47/dataloader/data_loader.py#L86-L90) for more details.
 
+### Motion Categories
+
+We mannually classified all of the motions into 30 motion categories as follows:
+
+|Motion Category|Example Motions|
+|---------|----------|
+|1: jumping |cross_jumps, forward_jump, joyful_jump |
+|2: falling down |stunned, knocked_down, dying |
+|3: exercising |air_squat, back_squat, bicycle_crunch |
+|4: pulling |pulling_a_rope |
+|5: singing |singing, guitar_playing |
+|6: rolling |running_dive_roll |
+|7: crawling |crawl_backwards, running_crawl |
+|8: laying |laying_breathless, stroke_shrugging |
+|9: sitting on the ground |sitting_dazed |
+|10: crouching - normal |crouch_look_around_corner |
+|11: crouching - turning |crouch_turn_to_stand |
+|12: crouching - to standing |crouch_to_stand, getting_up |
+|13: crouching - forward |crouch_running, crouch_walk |
+|14: crouching - backward |crouch_run_backwards, pull_heavy_object |
+|15: crouching - sideways |crouch_walk_left, crouch_walk_right |
+|16: standing - whole body |angry, digging, looking_around|
+|17: standing - upper body |blow_a_kiss, bartending, disappointed|
+|18: standing - turning |change_direction |
+|19: standing - to crouching |kneel |
+|20: standing - forward |walking, open_door_outwards |
+|21: standing - backward |run_backward_arc_right |
+|22: standing - sideways |standing_walk_right |
+|23: dancing |wave_hip_hop_dance, bellydancing |
+|24: boxing |cross_punch, reaction |
+|25: wrestling |kicking, headbutt |
+|26: soccer |chip, goalkeeper_catch|
+|27: baseball  |pitching, buntm hit |
+|28: basketball |dribble, intercepting |
+|29: american football |receiver_catch, quarterback_pass |
+|30: golf |golf_drive, golf_tee_up |
+
+
+
+
 
 ## Dependencies 
 
