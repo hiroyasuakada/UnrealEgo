@@ -107,31 +107,32 @@ We mannually classified all of the motions into 30 motion categories as follows:
 
 
 
+## Implementation
 
-## Dependencies 
+### Dependencies 
 
 - Python 3.7
 - Ubuntu 18.04
 - PyTorch 1.6.0
 - Cuda 10.1
 
-## Training
+### Training
 
 You can train the models from scratch or use [trained weights](https://drive.google.com/drive/folders/1uTS6Z3BJ4oMz1YbQXSVC1M2Y924CTMs0?usp=sharing). The model weights will be saved in `./log/(experiment_name)`.
 
-### Heatmap
+#### Heatmap
 
         bash scripts/train/unrealego_heatmap_shared.sh
         
         
-### AutoEncoder 
+#### AutoEncoder 
 
         bash scripts/train/unrealego_autoencoder.sh
 
 After the training is finished, you will see quantitative results.
 
 
-## Testing
+### Testing
 
 If you want to see quantitative results using trained weights, run the command below.
 
