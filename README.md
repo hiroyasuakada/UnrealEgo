@@ -123,12 +123,14 @@ You can train the models from scratch or use [trained weights](https://drive.goo
 #### Heatmap
 
         bash scripts/train/unrealego_heatmap_shared.sh
-        
+
+please specify the path to the UnrealEgo dataset in '--data_dir'.
         
 #### AutoEncoder 
 
         bash scripts/train/unrealego_autoencoder.sh
 
+please specify the path to the UnrealEgo dataset in '--data_dir'.
 After the training is finished, you will see quantitative results.
 
 
