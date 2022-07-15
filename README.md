@@ -1,6 +1,9 @@
 # UnrealEgo: A New Dataset for Robust Egocentric 3D Human Motion Capture (ECCV2022)
 
 Official PyTorch implementation of our ECCV 2022 paper, "UnrealEgo: A New Dataset for Robust Egocentric 3D Human Motion Capture".
+UnrealEgo is based on an advanced concept of eyeglasses equipped with two fisheye cameras that can be used in unconstrained environments. it contains more than 450 thousand naturalistic egocentric stereo views in a wider variety of 3D environemnts.
+
+![img](doc/overview_of_setting_2.png)
 
 **For any questions, please contact the first author, Hiroyasu Akada [hakada@mpi-inf.mpg.de] .**
 
