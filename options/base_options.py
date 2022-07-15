@@ -24,7 +24,7 @@ class BaseOptions():
         self.parser.add_argument('--gpu_ids', type=str, default='0',
                                 help='gpu ids: e.g. 0, 1, 2 use -1 for CPU')   
         self.parser.add_argument('--model', type=str, default='egoglass',
-                                help='choose which model to use, [xr_egopose] | [egoglass] | [unrealego]')
+                                help='choose which model to use, [egoglass] | [unrealego_heatmap_shared] | [unrealego_autoencoder]')
         self.parser.add_argument('--init_ImageNet', action='store_true', 
                                 help='If true, use ImageNet initialization for the backbone')
         self.parser.add_argument('--model_name', type=str, default='resnet18', 
@@ -38,14 +38,14 @@ class BaseOptions():
 
         ### dataset parameters ###
         self.parser.add_argument('--data_dir', type=str, default="../../../../../CT/UnrealEgo/static00/UnrealEgoData",
-                                help='training, validation, and testing dataset')
+                                help='path to the UnrealEgo datqaset')
         self.parser.add_argument('--num_seq', type=int, default=1,
                                 help='number of sequential images to be processd at one iteration')
         self.parser.add_argument('--num_heatmap', type=int, default=15,
                                 help='# of heatmaps')
         self.parser.add_argument('--num_threads', default=8, type=int, 
                                 help='# threads for loading data')
-        self.parser.add_argument('--batch_size', type=int, default=32, 
+        self.parser.add_argument('--batch_size', type=int, default=16, 
                                 help='input batch size')
         self.parser.add_argument('--load_size_rgb', nargs='+', type=int, default=[256, 256], 
                                 help='scale images to this size')
