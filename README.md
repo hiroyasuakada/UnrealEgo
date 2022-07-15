@@ -12,7 +12,7 @@ UnrealEgo is based on an advanced concept of eyeglasses equipped with two fishey
 ```
     @inproceedings{hakada2022unrealego,
       title = {UnrealEgo: A New Dataset for Robust Egocentric 3D Human Motion Capture},
-      author = {Akada, Hiroyasu and Wang, Jian and Shimada, Soshi and Takahashi, Masaki and Golyanik, Vladislav and Theobalt, Christian},
+      author = {Akada, Hiroyasu and Wang, Jian and Shimada, Soshi and Takahashi, Masaki and Theobalt, Christian and Golyanik, Vladislav},
       booktitle = {European Conference on Computer Vision (ECCV)}, 
       year = {2022}
     } 
@@ -122,13 +122,13 @@ You can train the models from scratch or use [trained weights](https://drive.goo
 
 #### Heatmap
 
-        bash scripts/train/unrealego_heatmap_shared.sh
+        bash scripts/train/unrealego_heatmap_shared/unrealego_heatmap_shared.sh
 
 please specify the path to the UnrealEgo dataset in '--data_dir'.
         
 #### AutoEncoder 
 
-        bash scripts/train/unrealego_autoencoder.sh
+        bash scripts/train/unrealego_autoencoder/unrealego_autoencoder.sh
 
 please specify the path to the UnrealEgo dataset in '--data_dir'.
 After the training is finished, you will see quantitative results.
@@ -139,6 +139,13 @@ After the training is finished, you will see quantitative results.
 If you want to see quantitative results using trained weights, run the command below.
 
         bash scripts/test/unrealego_autoencoder.sh
+
+### Comparison Method
+
+We also provide our implementation of a previous work, EgoGlass, without additional segmentation supervision from their 2D body part branch.
+You can download [trained weights](https://drive.google.com/drive/folders/1uTS6Z3BJ4oMz1YbQXSVC1M2Y924CTMs0?usp=sharing). If you want to use our implementation or trained weight, please cite their paper.
+
+        bash scripts/train/unrealego/unrealego.sh
 
 
 ## License Terms
