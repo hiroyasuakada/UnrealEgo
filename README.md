@@ -17,7 +17,7 @@ Official PyTorch implementation of our ECCV 2022 paper, "UnrealEgo: A New Datase
 
 ## UnrealEgo Dataset
 
-Please download the UnrealEgo dataset on [our project page](https://4dqv.mpi-inf.mpg.de/UnrealEgo/).
+Please download the UnrealEgo dataset on [our project page](https://4dqv.mpi-inf.mpg.de/UnrealEgo/). The dataset is 1.9TB in total.
 
 ### Structure
 
@@ -25,17 +25,20 @@ The dataset is structured as follows:
 
 ```
 UnrealEgoData
+├── test.txt
+├── train.txt
+├── validation.txt
 ├── Environment Name 1
 │   ├── Day
 │   │   ├── Human Model Name 1
-│   │   │	└── Glasses Name
+│   │   │	└── Glasses Name (SKM_MenReadingGlasses_Shape_01)
 │   │	│		├── Motion Category 1
 │   │	│		│	├── Motion Name 1
-│   │	│		│	│	├── RGB
-│   │   │		│	│	├── Depth
-│   │   │		│	│	├── Heatmap
-│   │   │		│	│	├── Npy
-│   │   │		│	│	└── Json
+│   │	│		│	│	├── fisheye_final_image (RGB)
+│   │   │		│	│	├── fisheye_depth_image (Depth)
+│   │   │		│	│	├── fisheye_heatmap (Heatmap)
+│   │   │		│	│	├── json (keypoint, etc.)
+│   │   │		│	│	└── all_data_with_img-256_hm-64_pose-16_npy
 │   │   │		│	│
 │   │   │		│	├── Motion Name 2
 │   │   │		│	└──...
@@ -52,6 +55,14 @@ UnrealEgoData
 ├── Environment Name 3
 └──...
 ```
+
+We provide metadata for each frame:
+
+- fisheye_final_image: rgb images, 8-bit png, 1024 × 1024
+- fisheye_depth_image: depth images, 8-bit png, 1024 × 1024
+- fisheye_heatmap: heatmaps, npy, 64 × 64
+- json: json file with camera and pose information 
+- all_data_with_img-256_hm-64_pose-16_npy: this contains data used for faster training, including rgb images, heatmaps, and pelvis-relative 3D pose. See our [dataloader](https://github.com/hiroyasuakada/UnrealEgo/blob/e3ba929345eb71f27bac1ce8d97e25e106cc3d47/dataloader/data_loader.py#L86-L90) for more details.
 
 
 ## Dependencies 
