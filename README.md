@@ -64,7 +64,7 @@ We provide metadata for each frame:
 - fisheye_final_image: rgb images, 8-bit png, 1024 × 1024
 - fisheye_depth_image: depth images, 8-bit png, 1024 × 1024
 - fisheye_heatmap: heatmaps, npy, 64 × 64
-- json: json file with camera and pose information 
+- json: json file with camera, pose, and ground plane information 
 - all_data_with_img-256_hm-64_pose-16_npy: this contains data used for faster training, including rgb images, heatmaps, and pelvis-relative 3D pose. See our [dataloader](https://github.com/hiroyasuakada/UnrealEgo/blob/e3ba929345eb71f27bac1ce8d97e25e106cc3d47/dataloader/data_loader.py#L86-L90) for more details.
 
 ### Motion Categories
