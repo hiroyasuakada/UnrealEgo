@@ -145,7 +145,7 @@ If you want to see quantitative results using trained weights, run the command b
 ### Comparison Method
 
 We also provide our implementation of a previous work, EgoGlass, without additional segmentation supervision from their 2D body part branch.
-You can download [trained weights](https://drive.google.com/drive/folders/1uTS6Z3BJ4oMz1YbQXSVC1M2Y924CTMs0?usp=sharing). If you want to use our implementation or trained weight, please cite their paper.
+You can download [trained weights](https://drive.google.com/drive/folders/1uTS6Z3BJ4oMz1YbQXSVC1M2Y924CTMs0?usp=sharing). If you want to use this implementation or trained weight, please cite their paper.
 
         bash scripts/train/unrealego/unrealego.sh
 
