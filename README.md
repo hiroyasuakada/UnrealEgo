@@ -23,7 +23,8 @@ UnrealEgo is based on an advanced concept of eyeglasses equipped with two fishey
 Please download the UnrealEgo dataset on [our project page](https://4dqv.mpi-inf.mpg.de/UnrealEgo/). The dataset is 1.9TB in total.
 
 We provide txt files to divide UnrealEgo into training, validation, and testing splits. 
-Please modify the txt files based on your local paths, *e.g.*, `(Path to UnrealEgoData)/UnrealEgoData/CityPark_Showcase/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/019/Tender_Placement__1_`.
+
+Please modify the txt files based on your local paths, *e.g.*, `(local path)/UnrealEgoData/KyotoAlley_Showcase/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Patting`.
 
 **If some parts of the data are missing, please let me know.**
 
