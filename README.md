@@ -31,7 +31,7 @@ Please merge the downloaded **UnrealEgo 01 ~ 06** into one **UnrealEgoData** fol
 
 Note that in **UnrealEgo 06**,  We provide txt files to divide UnrealEgo into training, validation, and testing splits. 
 Please modify the txt files based on your local paths,
-e.g., '(local path)/UnrealEgoData/Lab_Scene/Day/rp_eric_rigged_001_ue4/SKM_MenReadingGlasses_Shape_01/026/Chip'.
+e.g., `(local path)/UnrealEgoData/Lab_Scene/Day/rp_eric_rigged_001_ue4/SKM_MenReadingGlasses_Shape_01/026/Chip`.
 
 
 ```
