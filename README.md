@@ -25,6 +25,8 @@ The dataset is ~2.5TB in total, including all of the metadata. See below for mor
 
 **If some parts of the data are missing, please let me know.**
 
+**If you want to just try our implementation, you don't need to download the whole dataset. See the desctiption of metadata below.**
+
 ### Structure
 
 Please merge the downloaded **UnrealEgo 01 ~ 06** into one **UnrealEgoData** folder as below. 
