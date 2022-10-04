@@ -20,16 +20,16 @@ UnrealEgo is based on an advanced concept of eyeglasses equipped with two fishey
 
 ## UnrealEgo Dataset
 
-Please download the UnrealEgo dataset (01 ~ 06) on [our project page](https://4dqv.mpi-inf.mpg.de/UnrealEgo/). 
-The dataset is ~2.5TB in total, including all of the metadata. See below for more details on the metadata.
+Please download the UnrealEgo dataset (01 ~ 06, impl 01 ~ 03) on [our project page](https://4dqv.mpi-inf.mpg.de/UnrealEgo/). 
+The dataset is ~2.2TB in total, including all of the metadata. See below for more details on the metadata.
 
-**By ECCV2022, we will add a new URL to data (~ 1TB) that allows you to try our implementation without downloading all of the metadata. Stay tuned!**
+If you want to try our implementation without downloading all of the metadata, please download **UnrealEgo impl 01 ~ 03** (~1TB).
 
 ### Structure
 
-Please merge the downloaded **UnrealEgo 01 ~ 06** into one **UnrealEgoData** folder as below. 
+Please merge the downloaded **UnrealEgo 01 ~ 06 and UnrealEgo impl 01 ~ 03** into one **UnrealEgoData** folder as below. 
 
-Note that in **UnrealEgo 06**,  we provide txt files to divide UnrealEgo into training, validation, and testing splits. 
+Note that in **UnrealEgo impl 03**,  we provide txt files to divide UnrealEgo into training, validation, and testing splits. 
 Please modify the txt files based on your local paths,
 e.g., `(local path)/UnrealEgoData/Lab_Scene/Day/rp_eric_rigged_001_ue4/SKM_MenReadingGlasses_Shape_01/026/Chip`.
 
@@ -70,8 +70,8 @@ We provide metadata for each frame:
 
 - fisheye_final_image: rgb images, 8-bit png, 1024 × 1024
 - fisheye_depth_image: depth images, 8-bit png, 1024 × 1024
-- json: json file with camera, pose, and ground plane information 
-- all_data_with_img-256_hm-64_pose-16_npy: this file contains data used for faster training, including rgb images (256 × 256), heatmaps (64 × 64), and pelvis-relative 3D pose listed [here](https://github.com/hiroyasuakada/UnrealEgo/blob/50c01042244ddf9270da9a28adfa534f60856327/utils/loss.py#L9). 
+- json: json files with camera, pose, and ground plane data in a world space
+- all_data_with_img-256_hm-64_pose-16_npy: this file contains data used for faster training, including resized rgb images (256 × 256), heatmaps (64 × 64), and pelvis-relative 3D pose listed [here](https://github.com/hiroyasuakada/UnrealEgo/blob/50c01042244ddf9270da9a28adfa534f60856327/utils/loss.py#L9). 
 See our [dataloader](https://github.com/hiroyasuakada/UnrealEgo/blob/e3ba929345eb71f27bac1ce8d97e25e106cc3d47/dataloader/data_loader.py#L86-L90) for more details on how to load data.
 
 ### Motion Categories
