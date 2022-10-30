@@ -25,7 +25,7 @@ The dataset is ~2.2TB in total, including all of the metadata. See below for mor
 
 If you only want to try our implementation, please download **UnrealEgo impl 01 ~ 03** (~1TB).
 
-**We are currently converting the dataset into zip format to avoid some issue about donwloading on Google Drive.**
+**We are currently converting the dataset into zip format to avoid some issue about donwloading on Google Drive. This conversion is expected to finish by early November, 2022.**
 
 ### Structure
 
