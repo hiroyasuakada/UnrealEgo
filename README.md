@@ -23,13 +23,13 @@ UnrealEgo is based on an advanced concept of eyeglasses equipped with two fishey
 Please download the **UnrealEgo dataset (01 ~ 06, impl 01 ~ 03)** on [our project page](https://4dqv.mpi-inf.mpg.de/UnrealEgo/). 
 The dataset is ~2.2TB in total, including all of the metadata. See below for more details on the metadata.
 
-If you only want to try our implementation, please download **UnrealEgo impl 01 ~ 03** (~1TB).
+If you only want to try our implementation, please just download **UnrealEgo impl 01 ~ 03** (~1TB).
 
-**We are currently converting the dataset into zip format to avoid some issue about donwloading on Google Drive. This conversion is expected to finish by early November, 2022.**
+**We are currently converting **UnrealEgo 01~06** into zip format to avoid some issue about donwloading on Google Drive. This conversion is expected to finish by early November, 2022.**
 
 ### Structure
 
-Please merge the **UnrealEgo dataset (01 ~ 06, impl 01 ~ 03)** into a single **UnrealEgoData** folder as below. 
+Please unzip and merge the **UnrealEgo dataset (01 ~ 06, impl 01 ~ 03)** into a single **UnrealEgoData** folder as below. 
 
 Note that in **UnrealEgo impl 03**,  we provide txt files to divide UnrealEgo into training, validation, and testing splits. 
 Please modify the txt files based on your local paths,
