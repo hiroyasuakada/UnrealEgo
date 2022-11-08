@@ -22,8 +22,8 @@ UnrealEgo is based on an advanced concept of eyeglasses equipped with two fishey
 
 Please download the **UnrealEgo dataset** on [our project page](https://4dqv.mpi-inf.mpg.de/UnrealEgo/). 
 
-**UnrealEgo 01 ~ 06** contain the original dataset (~1.5TB) and **UnrealEgo impl 01 ~ 03** contain a preprocessed dataset (~1TB) for our implementation.
-If you only want to try our implementation, please just download **UnrealEgo impl 01 ~ 03**.
+- **UnrealEgo 01 ~ 06**: this is the original dataset (~1.5TB)
+- **UnrealEgo impl 01 ~ 03**: this is a preprocessed dataset (~1TB) for our implementation. If you only want to try our implementation, please just download this set.
 
 See below for more details on the dataset structure.
 
