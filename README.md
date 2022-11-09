@@ -72,10 +72,10 @@ UnrealEgoData
 
 We provide metadata for each frame:
 
-- fisheye_final_image: rgb images, 8-bit png, 1024 × 1024
-- fisheye_depth_image: depth images, 8-bit png, 1024 × 1024
-- json: json files with camera, pose, and ground plane data in a world space
-- all_data_with_img-256_hm-64_pose-16_npy: this file contains preprocessed data used for faster training
+- **fisheye_final_image**: rgb images, 8-bit png, 1024 × 1024
+- **fisheye_depth_image**: depth images, 8-bit png, 1024 × 1024
+- **json**: json files with camera, pose, and ground plane data in a world space
+- **all_data_with_img-256_hm-64_pose-16_npy**: this file contains preprocessed data used for faster training
     - rgb images (resized to 256 × 256 and normalized with ImageNet statistics)
     - heatmaps (64 × 64)
     - pelvis-relative 3D pose listed [here](https://github.com/hiroyasuakada/UnrealEgo/blob/50c01042244ddf9270da9a28adfa534f60856327/utils/loss.py#L9). 
