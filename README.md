@@ -78,8 +78,8 @@ We provide metadata for each frame:
 - **all_data_with_img-256_hm-64_pose-16_npy**: this file contains preprocessed data used for faster training
     - rgb images (resized to 256 × 256 and normalized with ImageNet statistics)
     - heatmaps (64 × 64)
-    - pelvis-relative 3D pose listed [here](https://github.com/hiroyasuakada/UnrealEgo/blob/50c01042244ddf9270da9a28adfa534f60856327/utils/loss.py#L9). 
-    - See our [dataloader](https://github.com/hiroyasuakada/UnrealEgo/blob/e3ba929345eb71f27bac1ce8d97e25e106cc3d47/dataloader/data_loader.py#L86-L90) for more details on how to load data.
+    - pelvis-relative 3D pose (16 keypoints listed [here](https://github.com/hiroyasuakada/UnrealEgo/blob/50c01042244ddf9270da9a28adfa534f60856327/utils/loss.py#L9))
+    - See our [dataloader](https://github.com/hiroyasuakada/UnrealEgo/blob/e3ba929345eb71f27bac1ce8d97e25e106cc3d47/dataloader/data_loader.py#L86-L90) for more details on how to load data
 
 ### Motion Categories
 
