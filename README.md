@@ -81,6 +81,21 @@ We provide metadata for each frame:
     - pelvis-relative 3D pose (16 keypoints listed [here](https://github.com/hiroyasuakada/UnrealEgo/blob/50c01042244ddf9270da9a28adfa534f60856327/utils/loss.py#L9))
     - See our [dataloader](https://github.com/hiroyasuakada/UnrealEgo/blob/e3ba929345eb71f27bac1ce8d97e25e106cc3d47/dataloader/data_loader.py#L86-L90) for more details on how to load data
 
+### Image Visualization of the Preprocessed Data
+
+To visualize images from the preprocessed data (**all_data_with_img-256_hm-64_pose-16_npy**) , run the following code.
+
+        python visualize_image.py /
+            --path_npy_data [specify the path to npy data, *e.g.* ~/all_data_with_img-256_hm-64_pose-16_npy/frame_0.npy] /
+            --save_dir [specify the dir to save images]
+
+
+|RGB left (256 × 256)|RGB right (256 × 256)|Heatmap left (64 × 64)|Heatmap right (64 × 64)|
+|---|---|---|---|
+|<p align="center">![img](doc/input_rgb_left.png)</p>|<p align="center">![img](doc/input_rgb_right.png)</p>|<p align="center">![img](doc/gt_heatmap_left.png)</p>|<p align="center">![img](doc/gt_heatmap_right.png)</p>|
+
+
+
 ### Motion Categories
 
 We mannually classified all of the motions into 30 motion categories as follows:
