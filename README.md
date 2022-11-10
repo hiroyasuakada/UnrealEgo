@@ -89,9 +89,9 @@ To visualize images from the preprocessed data (**all_data_with_img-256_hm-64_po
             --save_dir [specify the dir to save images]
 
 
-|RGB left (256 × 256)|RGB right (256 × 256)|Heatmap left (64 × 64)|Heatmap right (64 × 64)|
+|RGB right (256 × 256)|RGB left (256 × 256)|Heatmap right (64 × 64)|Heatmap left (64 × 64)|
 |---|---|---|---|
-|<p align="center">![img](doc/input_rgb_left.png)</p>|<p align="center">![img](doc/input_rgb_right.png)</p>|<p align="center">![img](doc/gt_heatmap_left.png)</p>|<p align="center">![img](doc/gt_heatmap_right.png)</p>|
+|<p align="center"><img src=doc/input_rgb_right.png width="128"></p>|<p align="center"><img src=doc/input_rgb_left.png width="128"></p>|<p align="center"><img src=doc/gt_heatmap_right.png width="128"></p>|<p align="center"><img src=doc/gt_heatmap_left.png width="128"></p>|
 
 
 
