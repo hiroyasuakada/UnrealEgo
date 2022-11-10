@@ -88,11 +88,11 @@ To visualize images from the preprocessed data (**all_data_with_img-256_hm-64_po
             --path_npy_data [specify the path to npy data, e.g. ~/all_data_with_img-256_hm-64_pose-16_npy/frame_0.npy] /
             --save_dir [specify the dir to save images]
 
+Images will be stored in the specified directory.
 
+|<img src=doc/input_rgb_right.png width="128">|<img src=doc/input_rgb_left.png width="128">|<img src=doc/gt_heatmap_right.png width="128">|<img src=doc/gt_heatmap_left.png width="128">|
+|:---:|:---:|:---:|:---:|
 |RGB right (256 × 256)|RGB left (256 × 256)|Heatmap right (64 × 64)|Heatmap left (64 × 64)|
-|---|---|---|---|
-|<p align="center"><img src=doc/input_rgb_right.png width="128"></p>|<p align="center"><img src=doc/input_rgb_left.png width="128"></p>|<p align="center"><img src=doc/gt_heatmap_right.png width="128"></p>|<p align="center"><img src=doc/gt_heatmap_left.png width="128"></p>|
-
 
 
 ### Motion Categories
