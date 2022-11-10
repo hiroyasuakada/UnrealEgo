@@ -86,7 +86,7 @@ We provide metadata for each frame:
 To visualize images from the preprocessed data (**all_data_with_img-256_hm-64_pose-16_npy**) , run the following code.
 
         python visualize_image.py /
-            --path_npy_data [specify the path to npy data, *e.g.* ~/all_data_with_img-256_hm-64_pose-16_npy/frame_0.npy] /
+            --path_npy_data [specify the path to npy data, e.g. ~/all_data_with_img-256_hm-64_pose-16_npy/frame_0.npy] /
             --save_dir [specify the dir to save images]
 
 
