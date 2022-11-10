@@ -92,7 +92,7 @@ Images will be stored in the specified directory.
 
 |<img src=doc/input_rgb_right.png width="128">|<img src=doc/input_rgb_left.png width="128">|<img src=doc/gt_heatmap_right.png width="128">|<img src=doc/gt_heatmap_left.png width="128">|
 |:---:|:---:|:---:|:---:|
-|RGB right (256 × 256)|RGB left (256 × 256)|Heatmap right (64 × 64)|Heatmap left (64 × 64)|
+|RGB right<br>(256 × 256)|RGB left<br>(256 × 256)|Heatmap right<br>(64 × 64)|Heatmap left<br>(64 × 64)|
 
 
 ### Motion Categories
