@@ -27,7 +27,6 @@ Please download the **UnrealEgo dataset** on [our project page](https://4dqv.mpi
 
 See below for more details on the dataset structure.
 
-**We are currently converting **UnrealEgo 01~06** into zip format to avoid some issue about donwloading on Google Drive. This conversion is expected to finish by early November, 2022.**
 
 ### Structure
 
