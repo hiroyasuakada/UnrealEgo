@@ -25,7 +25,7 @@ Please download the **UnrealEgo dataset** on [our project page](https://4dqv.mpi
 - **UnrealEgo 01 ~ 06**: this is an original dataset (~1.5TB)
 - **UnrealEgo impl 01 ~ 03**: this is a preprocessed dataset (~1TB) for our implementation. If you only want to try our implementation, please just download this set.
 
-**Currently, there are some issues on the original dataset and we are fixing them.**
+**Currently, there are some issues on the dataset and we are fixing them now. The issues are expected to be solved by Dec 10th, 2022.**
 
 See below for more details on the dataset structure.
 
