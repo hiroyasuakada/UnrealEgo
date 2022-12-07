@@ -22,19 +22,17 @@ UnrealEgo is based on an advanced concept of eyeglasses equipped with two fishey
 
 Please download the **UnrealEgo dataset** on [our project page](https://4dqv.mpi-inf.mpg.de/UnrealEgo/). 
 
-- **UnrealEgo 01 ~ 06**: this is an original dataset (~1.5TB)
-- **UnrealEgo impl 01 ~ 03**: this is a preprocessed dataset (~1TB) for our implementation. If you only want to try our implementation, please just download this set.
-
-**Currently, there are some issues on the dataset and we are fixing them now. The issues are expected to be solved by Dec 10th, 2022.**
+- **UnrealEgo 01 ~ 06**: this is an original dataset (~1.1TB)
+- **UnrealEgo impl**: this is a preprocessed dataset (~1TB) for our implementation. If you only want to try our implementation, please just download this set.
 
 See below for more details on the dataset structure.
 
 
 ### Structure
 
-Please unzip and merge the **UnrealEgo dataset (01 ~ 06, impl 01 ~ 03)** into a single **UnrealEgoData** folder as below. 
+Please extract and merge the **UnrealEgo dataset (01 ~ 06, impl)** into a single **UnrealEgoData** folder as below. 
 
-Note that in **UnrealEgo impl 03**,  we provide txt files to divide UnrealEgo into training, validation, and testing splits. 
+Note that in **UnrealEgo impl**,  we provide txt files to divide UnrealEgo into training, validation, and testing splits. 
 Please modify the txt files based on your local paths,
 e.g., `(local path)/UnrealEgoData/Lab_Scene/Day/rp_eric_rigged_001_ue4/SKM_MenReadingGlasses_Shape_01/026/Chip`.
 
