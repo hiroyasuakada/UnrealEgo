@@ -27,6 +27,7 @@ Please download the **UnrealEgo dataset** on [our project page](https://4dqv.mpi
 
 You can use our download script below or download each data directly from our project page.
 
+        pip install gdown
         bash scripts/data/download_unrealego.sh
 
 See below for more details on the dataset structure.
