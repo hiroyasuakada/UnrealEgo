@@ -25,17 +25,18 @@ Please download the **UnrealEgo dataset** on [our project page](https://4dqv.mpi
 - **UnrealEgo 01 ~ 06**: this is an original dataset (~1.1TB)
 - **UnrealEgo impl**: this is a preprocessed dataset (~1TB) for our implementation. If you only want to try our implementation, please just download this set.
 
+You can use our download script below or download each data directly from our project page.
+
+        bash scripts/data/download_unrealego.sh
+
 See below for more details on the dataset structure.
 
 
 ### Structure
 
-Please extract and merge the **UnrealEgo dataset (01 ~ 06, impl)** into a single **UnrealEgoData** folder as below. 
+With the download script, UnrealEgo will be stored in a single **UnrealEgoData** folder as below. If you downloaded each data directly from our project page, please extract and merge them accordingly.
 
 Note that in **UnrealEgo impl**,  we provide txt files to divide UnrealEgo into training, validation, and testing splits. 
-Please modify the txt files based on your local paths,
-e.g., `(local path)/UnrealEgoData/Lab_Scene/Day/rp_eric_rigged_001_ue4/SKM_MenReadingGlasses_Shape_01/026/Chip`.
-
 
 ```
 UnrealEgoData
@@ -152,13 +153,11 @@ You can train the models from scratch or use [trained weights](https://drive.goo
 
         bash scripts/train/unrealego_heatmap_shared/unrealego_heatmap_shared.sh
 
-please specify the path to the UnrealEgo dataset in '--data_dir'.
         
 #### AutoEncoder 
 
         bash scripts/train/unrealego_autoencoder/unrealego_autoencoder.sh
 
-please specify the path to the UnrealEgo dataset in '--data_dir'.
 After the training is finished, you will see quantitative results.
 
 
