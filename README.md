@@ -31,6 +31,8 @@ Note that this script will download both **UnrealEgo 01 ~ 06** and **UnrealEgo i
         pip install gdown
         bash scripts/data/download_unrealego.sh
 
+**We are aware that gdown sometimes throws an error and are trying to fix it.**
+
 See below for more details on the dataset structure.
 
 
