@@ -37,7 +37,7 @@ class BaseOptions():
                                 help='path to weights of the trained heatmap estimator')
 
         ### dataset parameters ###
-        self.parser.add_argument('--data_dir', type=str, default="../../../../../CT/UnrealEgo/static00/UnrealEgoData",
+        self.parser.add_argument('--data_dir', type=str, default="./UnrealEgoData",
                                 help='path to the UnrealEgo datqaset')
         self.parser.add_argument('--num_seq', type=int, default=1,
                                 help='number of sequential images to be processd at one iteration')
