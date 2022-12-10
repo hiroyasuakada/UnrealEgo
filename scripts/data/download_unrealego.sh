@@ -74,7 +74,7 @@ download_data () {
         rm -r ${key}
         cat ${key}.tar* | tar xzvf -
         rm ${key}.tar*
-        echo:
+        echo;
     done
 }
 
@@ -85,7 +85,7 @@ download_txt () {
     for key in "${!ref_data[@]}"; do
         echo "Donwloading ${key} from ${ref_data[${key}]} ..."
         gdown ${ref_data[${key}]}
-        echo:
+        echo;
     done
 }
 
