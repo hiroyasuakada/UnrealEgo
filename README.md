@@ -26,9 +26,12 @@ Please download the **UnrealEgo dataset** on [our project page](https://4dqv.mpi
 - **UnrealEgo impl**: this is a preprocessed dataset (~1TB) for our implementation. If you only want to try our implementation, please just download this set.
 
 You can use our download script below or download each data directly from our project page.
+Note that this script will download both **UnrealEgo 01 ~ 06** and **UnrealEgo impl**. You can modify [this line](https://github.com/hiroyasuakada/UnrealEgo/blob/95ec2f96a6df7d9faf5a9abbe83514409705cd3c/scripts/data/download_unrealego.sh#L97-L104) to download specific sets of the data.
 
         pip install gdown
         bash scripts/data/download_unrealego.sh
+
+**We are aware that gdown sometimes throws an error and are trying to fix it.**
 
 See below for more details on the dataset structure.
 
