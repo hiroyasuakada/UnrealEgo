@@ -29,17 +29,19 @@ Our download script will download both **UnrealEgo 01 ~ 06** and **UnrealEgo imp
 
         bash scripts/data/download_unrealego.sh [Access Token]
 
-Please follow steps below to obtain access token from [OAuth 2.0 Playground](https://developers.google.com/oauthplayground/). 
+Please follow steps below to obtain Google’s OAuth Token from [OAuth 2.0 Playground](https://developers.google.com/oauthplayground/). 
 
-#### Step 1: go to [OAuth 2.0 Playground](https://developers.google.com/oauthplayground/)
+#### Step 1: Go to [OAuth 2.0 Playground](https://developers.google.com/oauthplayground/)
 
-#### Step 2: In the “Select the Scope” box, scroll down, expand “Drive API v3”, and select `https://www.googleapis.com/auth/drive.readonly`
+#### Step 2: In the “Select the Scope” box, sarch for “Drive API v3”, expand the scope and select `https://www.googleapis.com/auth/drive.readonly`
 
-#### Step 3: Click “Authorize APIs” and then “Exchange authorization code for tokens”. 
+#### Step 3: Click “Authorize APIs” and then “Exchange authorization code for tokens”
 
 #### Step 4: Copy the “Access token” and run the download script with it
 
 Note that this access token is valid for 1 hour. Once it expires, the download process will stop and you need to regenerate the token. You can re-run our download script with the token to resume the download process.
+
+You can find more information about OAuth 2.0 Playground [here](https://medium.com/@skylarng89/download-large-files-from-google-drive-using-drive-api-fcbdba64fb18).
 
 
 ### Data Structure
