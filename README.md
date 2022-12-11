@@ -20,23 +20,29 @@ UnrealEgo is based on an advanced concept of eyeglasses equipped with two fishey
 
 ## UnrealEgo Dataset
 
-Please download the **UnrealEgo dataset** on [our project page](https://4dqv.mpi-inf.mpg.de/UnrealEgo/). 
+You can download the **UnrealEgo dataset** on [our project page](https://4dqv.mpi-inf.mpg.de/UnrealEgo/) or use our download script. 
 
 - **UnrealEgo 01 ~ 06**: this is an original dataset (~1.1TB)
 - **UnrealEgo impl**: this is a preprocessed dataset (~1TB) for our implementation. If you only want to try our implementation, please just download this set.
+ 
+Our download script will download both **UnrealEgo 01 ~ 06** and **UnrealEgo impl**. You can modify [this line](https://github.com/hiroyasuakada/UnrealEgo/blob/6b2bfddef20145e8e660482dad7d3274b5020c48/scripts/data/download_unrealego.sh#L261-L268) to download specific sets of the data.
 
-You can use our download script below or download each data directly from our project page.
-Note that this script will download both **UnrealEgo 01 ~ 06** and **UnrealEgo impl**. You can modify [this line](https://github.com/hiroyasuakada/UnrealEgo/blob/95ec2f96a6df7d9faf5a9abbe83514409705cd3c/scripts/data/download_unrealego.sh#L97-L104) to download specific sets of the data.
+        bash scripts/data/download_unrealego.sh [Access Token]
 
-        pip install gdown
-        bash scripts/data/download_unrealego.sh
+Please follow steps below to obtain access token from [OAuth 2.0 Playground](https://developers.google.com/oauthplayground/). 
 
-**We are aware that gdown sometimes throws an error and are trying to fix it.**
+#### Step 1: go to [OAuth 2.0 Playground](https://developers.google.com/oauthplayground/)
 
-See below for more details on the dataset structure.
+#### Step 2: In the “Select the Scope” box, scroll down, expand “Drive API v3”, and select `https://www.googleapis.com/auth/drive.readonly`
+
+#### Step 3: Click “Authorize APIs” and then “Exchange authorization code for tokens”. 
+
+#### Step 4: Copy the “Access token” and run the download script with it
+
+Note that this access token is valid for 1 hour. Once it expires, the download process will stop and you need to regenerate the token. You can re-run our download script with the token to resume the download process.
 
 
-### Structure
+### Data Structure
 
 With the download script, UnrealEgo will be stored in a single **UnrealEgoData** folder as below. If you downloaded each data directly from our project page, please extract and merge them accordingly.
 
