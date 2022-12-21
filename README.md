@@ -86,7 +86,7 @@ We provide metadata for each frame:
 
 - **fisheye_final_image**: rgb images, 8-bit png, 1024 × 1024
 - **fisheye_depth_image**: depth images, 8-bit png, 1024 × 1024
-- **json**: json files with camera, pose, and ground plane data in a world space
+- **json**: json files with camera, pose, and ground plane data
     - trans: global translation in the UE4 coordinate system
     - rot: global rotation in the UE4 coordinate system
     - camera pts3d: camera-relative 3D keypoint location in the OpenCV coordinate system
