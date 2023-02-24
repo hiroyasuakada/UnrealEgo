@@ -50,7 +50,7 @@ You can find more information about OAuth 2.0 Playground [here](https://medium.c
 
 With the download script, UnrealEgo will be stored in a single **UnrealEgoData** folder as below. If you downloaded each data directly from our project page, please extract and merge them accordingly.
 
-Note that in **UnrealEgo impl**,  we provide txt files to divide UnrealEgo into training, validation, and testing splits. 
+Note that in **UnrealEgo impl**,  we provide txt files to divide UnrealEgo into training (3820 motions), validation (493 motions), and testing (526 motions) splits. 
 
 ```
 UnrealEgoData
