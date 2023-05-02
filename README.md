@@ -89,14 +89,14 @@ We provide metadata for each frame:
 - **fisheye_final_image**: rgb images, 8-bit png, 1024 × 1024
 - **fisheye_depth_image**: depth images, 8-bit png, 1024 × 1024
 - **json**: json files with camera, pose, and ground plane data
-    - trans: global translation in the UE4 coordinate system
-    - rot: global rotation in the UE4 coordinate system
-    - camera pts3d: camera-relative 3D keypoint location in the OpenCV coordinate system
-    - camera pts2d: 2D keypoint location in the image coordinate
+    - trans: global translation (X, Y, Z) in the UE4 coordinate system
+    - rot: global rotation (P, Y, R) in the UE4 coordinate system
+    - camera pts3d: camera-relative 3D keypoint location (X, Y, Z) in the OpenCV coordinate system
+    - camera pts2d: 2D keypoint location (X, Y) in the image coordinate
 - **all_data_with_img-256_hm-64_pose-16_npy**: this file contains preprocessed data used for faster training
-    - rgb images (resized to 256 × 256 and normalized with ImageNet statistics)
-    - heatmaps (64 × 64)
-    - pelvis-relative 3D pose (16 keypoints listed [here](https://github.com/hiroyasuakada/UnrealEgo/blob/50c01042244ddf9270da9a28adfa534f60856327/utils/loss.py#L9))
+    - rgb images (resized to 256 × 256 and normalized with ImageNet statistics, *i.e.*, mean=[0.485, 0.456, 0.406] and std=[0.229, 0.224, 0.225])
+    - heatmaps (64 × 64, generated from camera pts2d)
+    - pelvis-relative 3D pose with 16 keypoints listed [here](https://github.com/hiroyasuakada/UnrealEgo/blob/50c01042244ddf9270da9a28adfa534f60856327/utils/loss.py#L9) (generated from camera pts3d)
     - See our [dataloader](https://github.com/hiroyasuakada/UnrealEgo/blob/e3ba929345eb71f27bac1ce8d97e25e106cc3d47/dataloader/data_loader.py#L86-L90) for more details on how to load data
 
 ### Image Visualization of the Preprocessed Data
