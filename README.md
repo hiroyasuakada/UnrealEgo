@@ -68,10 +68,10 @@ UnrealEgoData
 │   │   │		│	│	├── json (keypoint, etc.)
 │   │   │		│	│	└── all_data_with_img-256_hm-64_pose-16_npy (RGB, Heatmap, Keypoint)
 │   │   │		│	│
-│   │   │		│	├── Motion Name 2
+│   │   │		│	├── Motion Sequence 2
 │   │   │		│	└──...
 │   │   │		│
-│   │   │		├── Motion Sequence 2
+│   │   │		├── Motion Category 2
 │   │   │		└──...
 │   │   │
 │   │	├── Human Model Name 2
