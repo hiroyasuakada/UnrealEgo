@@ -62,7 +62,7 @@ UnrealEgoData
 │   │   ├── Human Model Name 1
 │   │   │	└── Glasses Name (SKM_MenReadingGlasses_Shape_01)
 │   │	│		├── Motion Category 1
-│   │	│		│	├── Motion Name 1
+│   │	│		│	├── Motion Sequence 1
 │   │	│		│	│	├── fisheye_final_image (RGB)
 │   │   │		│	│	├── fisheye_depth_image (Depth)
 │   │   │		│	│	├── json (keypoint, etc.)
@@ -71,7 +71,7 @@ UnrealEgoData
 │   │   │		│	├── Motion Name 2
 │   │   │		│	└──...
 │   │   │		│
-│   │   │		├── Motion Category 2
+│   │   │		├── Motion Sequence 2
 │   │   │		└──...
 │   │   │
 │   │	├── Human Model Name 2
