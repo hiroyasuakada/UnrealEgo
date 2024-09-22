@@ -99,8 +99,7 @@ We provide metadata for each frame:
     - pelvis-relative 3D pose with 16 keypoints listed [here](https://github.com/hiroyasuakada/UnrealEgo/blob/50c01042244ddf9270da9a28adfa534f60856327/utils/loss.py#L9) (generated from camera pts3d)
     - See our [dataloader](https://github.com/hiroyasuakada/UnrealEgo/blob/e3ba929345eb71f27bac1ce8d97e25e106cc3d47/dataloader/data_loader.py#L86-L90) for more details on how to load data
 
-Our camera calibration file is also available [here](https://github.com/hiroyasuakada/UnrealEgo/blob/906d2eac2fea517a20ecb5da6a78fa6c87ae6c41/utils/fisheye_calibration_UEP.json). Note that we used the Scaramuzza fisheye camera model.
-
+Our camera calibration file is also available [here](https://github.com/hiroyasuakada/UnrealEgo/blob/906d2eac2fea517a20ecb5da6a78fa6c87ae6c41/utils/fisheye_calibration_UEP.json). Note that we used the Scaramuzza fisheye camera model and that "size" and "image_center" of the calibration data (json) of the Scaramuzza fisheye camera model are stored as [width, height].
 
 ### Image Visualization of the Preprocessed Data
 
