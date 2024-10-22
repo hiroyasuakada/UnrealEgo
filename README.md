@@ -7,7 +7,7 @@ UnrealEgo is based on an advanced concept of eyeglasses equipped with two fishey
 
 **For any questions, please contact the first author, Hiroyasu Akada [hakada@mpi-inf.mpg.de] .**
 
-## Citation
+# Citation
 
 ```
     @inproceedings{hakada2022unrealego,
@@ -18,19 +18,19 @@ UnrealEgo is based on an advanced concept of eyeglasses equipped with two fishey
     } 
 ```
 
-## Updates
+# Updates
 
 - 27/02/2024: New datasets, UnrealEgo2 and UnrealEgo-RW, are released! UnrealEgo2 is fully compatible with UnrealEgo. Please check out [our benchmark page](https://unrealego.mpi-inf.mpg.de/).
 
 
-## UnrealEgo Dataset
+# UnrealEgo Dataset
 
-### Download
+## Download
 
 You can download the **UnrealEgo dataset** on [our project page](https://4dqv.mpi-inf.mpg.de/UnrealEgo/) or use our download script. 
 
 - **UnrealEgo 01 ~ 06**: this is an original dataset (~1.1TB)
-- **UnrealEgo impl**: this is a preprocessed dataset (~1TB) used in our implementation for **pelvis-relative** pose estimation. If you only want to try our implementation, please just download this set. If you want to use/estimate **device-relative** poses, please check the instruction in the section below.
+- **UnrealEgo impl**: this is a preprocessed dataset (~1TB) used in our implementation for **pelvis-relative** pose estimation. If you only want to try our implementation, please just download this set. If you want to use/estimate **device-relative** poses, please check the instruction below.
  
 Our download script will download both **UnrealEgo 01 ~ 06** and **UnrealEgo impl**. You can modify [this line](https://github.com/hiroyasuakada/UnrealEgo/blob/6b2bfddef20145e8e660482dad7d3274b5020c48/scripts/data/download_unrealego.sh#L261-L268) to download specific sets of the data.
 
@@ -38,20 +38,20 @@ Our download script will download both **UnrealEgo 01 ~ 06** and **UnrealEgo imp
 
 Please follow steps below to obtain Google’s OAuth Token from [OAuth 2.0 Playground](https://developers.google.com/oauthplayground/). 
 
-#### Step 1: Go to [OAuth 2.0 Playground](https://developers.google.com/oauthplayground/)
+### Step 1: Go to [OAuth 2.0 Playground](https://developers.google.com/oauthplayground/)
 
-#### Step 2: In the “Select the Scope” box, sarch for “Drive API v3”, expand the scope and select `https://www.googleapis.com/auth/drive.readonly`
+### Step 2: In the “Select the Scope” box, sarch for “Drive API v3”, expand the scope and select `https://www.googleapis.com/auth/drive.readonly`
 
-#### Step 3: Click “Authorize APIs” and then “Exchange authorization code for tokens”
+### Step 3: Click “Authorize APIs” and then “Exchange authorization code for tokens”
 
-#### Step 4: Copy the “Access token” and run the download script with it
+### Step 4: Copy the “Access token” and run the download script with it
 
 Note that this access token is valid for 1 hour. Once it expires, the download process will stop and you need to regenerate the token. You can re-run our download script with the token to resume the download process.
 
 You can find more information about OAuth 2.0 Playground [here](https://medium.com/@skylarng89/download-large-files-from-google-drive-using-drive-api-fcbdba64fb18).
 
 
-### Data Structure
+## Data Structure
 
 With the download script, UnrealEgo will be stored in a single **UnrealEgoData** folder as below. If you downloaded each data directly from our project page, please extract and merge them accordingly.
 
@@ -99,7 +99,7 @@ We provide metadata for each frame:
     - camera left/right pts3d: camera-relative 3D keypoint location (X, Y, Z) in the OpenCV coordinate system
     - camera left/right pts2d: 2D keypoint location (X, Y) in the image coordinate
     - ground_z_value: height of the ground plane in the UE4 coordinate system, *i.e.* ground where characters perform motions
-- **all_data_with_img-256_hm-64_pose-16_npy**: this file contains preprocessed data used for faster training of our implementation for **pelvis-relative** pose estimation
+- **all_data_with_img-256_hm-64_pose-16_npy** (in UnrealEgo impl): this file contains preprocessed data used for faster training of our implementation for **pelvis-relative** pose estimation
     - rgb images (resized to 256 × 256 and normalized with ImageNet statistics, *i.e.*, mean=[0.485, 0.456, 0.406] and std=[0.229, 0.224, 0.225])
     - heatmaps (64 × 64, generated from camera pts2d)
     - pelvis-relative 3D pose with 16 keypoints listed [here](https://github.com/hiroyasuakada/UnrealEgo/blob/50c01042244ddf9270da9a28adfa534f60856327/utils/loss.py#L9) (generated from camera pts3d)
@@ -107,7 +107,7 @@ We provide metadata for each frame:
 
 Our camera calibration file is also available [here](https://github.com/hiroyasuakada/UnrealEgo/blob/906d2eac2fea517a20ecb5da6a78fa6c87ae6c41/utils/fisheye_calibration_UEP.json). Note that we used the Scaramuzza fisheye camera model and that "size" and "image_center" in the calibration file are stored as [width, height].
 
-### Instruction on how to obtain device-relative poses
+## Instruction on how to obtain device-relative poses
 
 Please first download the original dataset (**UnrealEgo 01 ~ 06**). Then, simply calculate the middle point between camera_left_pts3d and camera_right_pts3d.
 
@@ -118,7 +118,7 @@ Note that UnrealEgo is fully compatible with [UnrealEgo2](https://unrealego.mpi-
 In UnrealEgo2 and UnrealEgo-RW, the device-relative poses are already provided in the metadata.
 
 
-### Image Visualization of the Preprocessed Data (UnrealEgo_impl)
+## Image Visualization of the Preprocessed Data (in UnrealEgo impl)
 
 To visualize images from the preprocessed data (**all_data_with_img-256_hm-64_pose-16_npy**) , run the following code.
 
@@ -133,7 +133,7 @@ Images will be stored in the specified directory.
 |RGB right<br>(256 × 256)|RGB left<br>(256 × 256)|Heatmap right<br>(64 × 64)|Heatmap left<br>(64 × 64)|
 
 
-### Motion Categories
+## Motion Categories
 
 We mannually classified all of the motions into 30 motion categories as follows:
 
