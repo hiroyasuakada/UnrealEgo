@@ -96,9 +96,9 @@ We provide metadata for each frame:
 - **json**: json files with camera, pose, and ground plane data
     - trans: global translation (X, Y, Z) in the UE4 coordinate system
     - rot: global rotation (P, Y, R) in the UE4 coordinate system
+    - ground z value: height of the ground plane in the UE4 coordinate system, *i.e.* ground where characters perform motions
     - camera left/right pts3d: camera-relative 3D keypoint location (X, Y, Z) in the OpenCV coordinate system
     - camera left/right pts2d: 2D keypoint location (X, Y) in the image coordinate
-    - ground_z_value: height of the ground plane in the UE4 coordinate system, *i.e.* ground where characters perform motions
 - **all_data_with_img-256_hm-64_pose-16_npy** (in UnrealEgo impl): this file contains preprocessed data used for faster training of our implementation for **pelvis-relative** pose estimation
     - rgb images (resized to 256 × 256 and normalized with ImageNet statistics, *i.e.*, mean=[0.485, 0.456, 0.406] and std=[0.229, 0.224, 0.225])
     - heatmaps (64 × 64, generated from camera pts2d)
