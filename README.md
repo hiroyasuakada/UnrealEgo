@@ -18,6 +18,11 @@ UnrealEgo is based on an advanced concept of eyeglasses equipped with two fishey
     } 
 ```
 
+## Updates
+
+- 27/02/2024: New datasets, UnrealEgo2 and UnrealEgo-RW, are released! UnrealEgo2 is fully compatible with UnrealEgo. Please check out [our benchmark page](https://unrealego.mpi-inf.mpg.de/).
+
+
 ## UnrealEgo Dataset
 
 ### Download
@@ -25,7 +30,7 @@ UnrealEgo is based on an advanced concept of eyeglasses equipped with two fishey
 You can download the **UnrealEgo dataset** on [our project page](https://4dqv.mpi-inf.mpg.de/UnrealEgo/) or use our download script. 
 
 - **UnrealEgo 01 ~ 06**: this is an original dataset (~1.1TB)
-- **UnrealEgo impl**: this is a preprocessed dataset (~1TB) for our implementation. If you only want to try our implementation, please just download this set.
+- **UnrealEgo impl**: this is a preprocessed dataset (~1TB) used in our implementation for **pelvis-relative** pose estimation. If you only want to try our implementation, please just download this set. If you want to use/estimate **device-relative** poses, please check the instruction in the section below.
  
 Our download script will download both **UnrealEgo 01 ~ 06** and **UnrealEgo impl**. You can modify [this line](https://github.com/hiroyasuakada/UnrealEgo/blob/6b2bfddef20145e8e660482dad7d3274b5020c48/scripts/data/download_unrealego.sh#L261-L268) to download specific sets of the data.
 
@@ -94,7 +99,7 @@ We provide metadata for each frame:
     - camera left/right pts3d: camera-relative 3D keypoint location (X, Y, Z) in the OpenCV coordinate system
     - camera left/right pts2d: 2D keypoint location (X, Y) in the image coordinate
     - ground_z_value: height of the ground plane in the UE4 coordinate system, *i.e.* ground where characters perform motions
-- **all_data_with_img-256_hm-64_pose-16_npy**: this file contains preprocessed data used for faster training
+- **all_data_with_img-256_hm-64_pose-16_npy**: this file contains preprocessed data used for faster training of our implementation for **pelvis-relative** pose estimation
     - rgb images (resized to 256 × 256 and normalized with ImageNet statistics, *i.e.*, mean=[0.485, 0.456, 0.406] and std=[0.229, 0.224, 0.225])
     - heatmaps (64 × 64, generated from camera pts2d)
     - pelvis-relative 3D pose with 16 keypoints listed [here](https://github.com/hiroyasuakada/UnrealEgo/blob/50c01042244ddf9270da9a28adfa534f60856327/utils/loss.py#L9) (generated from camera pts3d)
@@ -102,7 +107,18 @@ We provide metadata for each frame:
 
 Our camera calibration file is also available [here](https://github.com/hiroyasuakada/UnrealEgo/blob/906d2eac2fea517a20ecb5da6a78fa6c87ae6c41/utils/fisheye_calibration_UEP.json). Note that we used the Scaramuzza fisheye camera model and that "size" and "image_center" in the calibration file are stored as [width, height].
 
-### Image Visualization of the Preprocessed Data
+### Instruction on how to obtain device-relative poses
+
+Please first download the original dataset (**UnrealEgo 01 ~ 06**). Then, simply calculate the middle point between camera_left_pts3d and camera_right_pts3d.
+
+>                 device_relative_pts3d = (camera_left_pts3d + camera_right_pts3d) / 2
+
+Note that UnrealEgo is fully compatible with [UnrealEgo2](https://unrealego.mpi-inf.mpg.de/). This means that you can train your method on UnrealEgo2 and test it on UnrealEgo, and vise versa. 
+
+In UnrealEgo2 and UnrealEgo-RW, the device-relative poses are already provided in the metadata.
+
+
+### Image Visualization of the Preprocessed Data (UnrealEgo_impl)
 
 To visualize images from the preprocessed data (**all_data_with_img-256_hm-64_pose-16_npy**) , run the following code.
 
@@ -157,7 +173,9 @@ We mannually classified all of the motions into 30 motion categories as follows:
 
 
 
-## Implementation
+## Implementation for pelvis-relative 3D pose estimation
+
+Note that if you want to use/estimate device-relative poses, please follow the instruction in the previous section. Also check out our [UnrealEgo2 and UnrealEgo-RW](https://unrealego.mpi-inf.mpg.de/).
 
 ### Dependencies 
 
