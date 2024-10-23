@@ -1,7 +1,7 @@
 # UnrealEgo: A New Dataset for Robust Egocentric 3D Human Motion Capture (ECCV2022)
 
 Official PyTorch implementation of our ECCV 2022 paper, "UnrealEgo: A New Dataset for Robust Egocentric 3D Human Motion Capture".
-UnrealEgo is based on an advanced concept of eyeglasses equipped with two fisheye cameras that can be used in unconstrained environments. it contains more than 450 thousand naturalistic egocentric stereo views in a wider variety of 3D environemnts.
+UnrealEgo is based on an advanced concept of eyeglasses equipped with two fisheye cameras that can be used in unconstrained environments. it contains more than 450 thousand naturalistic egocentric stereo views in a wider variety of 3D environments.
 
 ![img](doc/overview_of_setting_2.png)
 
@@ -30,17 +30,17 @@ UnrealEgo is based on an advanced concept of eyeglasses equipped with two fishey
 You can download the **UnrealEgo dataset** on [our project page](https://4dqv.mpi-inf.mpg.de/UnrealEgo/) or use our download script. 
 
 - **UnrealEgo 01 ~ 06**: this is an original dataset (~1.1TB)
-- **UnrealEgo impl**: this is a preprocessed dataset (~1TB) used in our implementation for **pelvis-relative** pose estimation. If you only want to try our implementation, please just download this set. If you want to use/estimate **device-relative** poses, please check the instruction below.
+- **UnrealEgo impl**: this is a preprocessed dataset (~1TB) used in our implementation for **pelvis-relative** pose estimation. If you only want to try our implementation, please just download this set. If you want to use/estimate **device-relative** poses, please check the instructions below.
  
 Our download script will download both **UnrealEgo 01 ~ 06** and **UnrealEgo impl**. You can modify [this line](https://github.com/hiroyasuakada/UnrealEgo/blob/6b2bfddef20145e8e660482dad7d3274b5020c48/scripts/data/download_unrealego.sh#L261-L268) to download specific sets of the data.
 
         bash scripts/data/download_unrealego.sh [Access Token]
 
-Please follow steps below to obtain Google’s OAuth Token from [OAuth 2.0 Playground](https://developers.google.com/oauthplayground/). 
+Please follow the steps below to obtain Google’s OAuth Token from [OAuth 2.0 Playground](https://developers.google.com/oauthplayground/). 
 
 ### Step 1: Go to [OAuth 2.0 Playground](https://developers.google.com/oauthplayground/)
 
-### Step 2: In the “Select the Scope” box, sarch for “Drive API v3”, expand the scope and select `https://www.googleapis.com/auth/drive.readonly`
+### Step 2: In the “Select the Scope” box, search for “Drive API v3”, expand the scope, and select `https://www.googleapis.com/auth/drive.readonly`
 
 ### Step 3: Click “Authorize APIs” and then “Exchange authorization code for tokens”
 
@@ -94,11 +94,11 @@ We provide metadata for each frame:
 - **fisheye_final_image**: rgb images, 8-bit png, 1024 × 1024
 - **fisheye_depth_image**: depth images, 8-bit png, 1024 × 1024
 - **json**: json files with camera, pose, and ground plane data
-    - trans: global translation (X, Y, Z) in the UE4 coordinate system
-    - rot: global rotation (P, Y, R) in the UE4 coordinate system
-    - ground z value: height of the ground plane in the UE4 coordinate system, *i.e.* ground where characters perform motions
+    - trans: translation (X, Y, Z) in the UE4 global coordinate system
+    - rot: rotation (P, Y, R) in the UE4 global coordinate system
+    - ground z value: height of the ground plane in the UE4 global coordinate system, *i.e.* ground where characters perform motions
     - camera left/right pts3d: camera-relative 3D keypoint location (X, Y, Z) in the OpenCV coordinate system
-    - camera left/right pts2d: 2D keypoint location (X, Y) in the image coordinate
+    - camera left/right pts2d: 2D keypoint location (X, Y) in the image coordinate system
 - **all_data_with_img-256_hm-64_pose-16_npy** (in UnrealEgo impl): this file contains preprocessed data used for faster training of our implementation for **pelvis-relative** pose estimation
     - rgb images (resized to 256 × 256 and normalized with ImageNet statistics, *i.e.*, mean=[0.485, 0.456, 0.406] and std=[0.229, 0.224, 0.225])
     - heatmaps (64 × 64, generated from camera pts2d)
@@ -113,14 +113,14 @@ Please first download the original dataset (**UnrealEgo 01 ~ 06**). Then, simply
 
 >                 device_relative_pts3d = (camera_left_pts3d + camera_right_pts3d) / 2
 
-Note that UnrealEgo is fully compatible with [UnrealEgo2](https://unrealego.mpi-inf.mpg.de/). This means that you can train your method on UnrealEgo2 and test it on UnrealEgo, and vise versa. 
+Note that UnrealEgo is fully compatible with [UnrealEgo2](https://unrealego.mpi-inf.mpg.de/). This means that you can train your method on UnrealEgo2 and test it on UnrealEgo, and vice versa. 
 
-In UnrealEgo2 and UnrealEgo-RW, the device-relative poses are already provided in the metadata.
+In UnrealEgo2 and UnrealEgo-RW, the device-relative poses are already provided in the metadata (json files).
 
 
 ## Image Visualization of the Preprocessed Data (in UnrealEgo impl)
 
-To visualize images from the preprocessed data (**all_data_with_img-256_hm-64_pose-16_npy**) , run the following code.
+To visualize images from the preprocessed data (**all_data_with_img-256_hm-64_pose-16_npy**), run the following code.
 
         python visualize_image.py /
             --path_npy_data [specify the path to npy data, e.g. ~/all_data_with_img-256_hm-64_pose-16_npy/frame_0.npy] /
@@ -135,7 +135,7 @@ Images will be stored in the specified directory.
 
 ## Motion Categories
 
-We mannually classified all of the motions into 30 motion categories as follows:
+We manually classified all of the motions into 30 motion categories as follows:
 
 |Motion Category|Example Motions|
 |---------|----------|
@@ -165,7 +165,7 @@ We mannually classified all of the motions into 30 motion categories as follows:
 |24: boxing |cross_punch, reaction |
 |25: wrestling |kicking, headbutt |
 |26: soccer |chip, goalkeeper_catch|
-|27: baseball  |pitching, buntm hit |
+|27: baseball  |pitching, bunt hit |
 |28: basketball |dribble, intercepting |
 |29: american football |receiver_catch, quarterback_pass |
 |30: golf |golf_drive, golf_tee_up |
@@ -175,7 +175,7 @@ We mannually classified all of the motions into 30 motion categories as follows:
 
 ## Implementation for pelvis-relative 3D pose estimation
 
-Note that if you want to use/estimate device-relative poses, please follow the instruction in the previous section. Also check out our [UnrealEgo2 and UnrealEgo-RW](https://unrealego.mpi-inf.mpg.de/).
+Note that if you want to use/estimate device-relative poses, please follow the instructions in the previous section. Also, check out our [UnrealEgo2 and UnrealEgo-RW](https://unrealego.mpi-inf.mpg.de/).
 
 ### Dependencies 
 
@@ -215,11 +215,11 @@ You can download [trained weights](https://drive.google.com/drive/folders/1_J8qc
 
 
 ## License Terms
-Permission is hereby granted, free of charge, to any person or company obtaining a copy of this dataset and associated documentation files (the "Dataset") from the copyright holders to use the Dataset for any non-commercial purpose. Redistribution and (re)selling of the Dataset, of modifications, extensions, and derivates of it, and of other dataset containing portions of the licensed Dataset, are not permitted. The Copyright holder is permitted to publically disclose and advertise the use of the software by any licensee.
+Permission is hereby granted, free of charge, to any person or company obtaining a copy of this dataset and associated documentation files (the "Dataset") from the copyright holders to use the Dataset for any non-commercial purpose. Redistribution and (re)selling of the Dataset, of modifications, extensions, and derivates of it, and of other datasets containing portions of the licensed Dataset, are not permitted. The Copyright holder is permitted to publically disclose and advertise the use of the software by any licensee.
 
 Packaging or distributing parts or whole of the provided software (including code and data) as is or as part of other datasets is prohibited. Commercial use of parts or whole of the provided dataset (including code and data) is strictly prohibited.
 
 THE DATASET IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE DATASET OR THE USE OR OTHER DEALINGS IN THE DATASET.
 
 ## Acknowledgments
-Code is inspired by [CycleGan](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix).
+The code is inspired by [CycleGan](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix).
