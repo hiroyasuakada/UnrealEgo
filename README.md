@@ -175,7 +175,11 @@ We manually classified all of the motions into 30 motion categories as follows:
 
 ## Implementation for pelvis-relative 3D pose estimation
 
-Note that if you want to use/estimate device-relative poses, please follow the instructions in the previous section. Also, check out our [UnrealEgo2 and UnrealEgo-RW](https://unrealego.mpi-inf.mpg.de/).
+Note that this is the implementation for **pelvis-relative pose estimation**. 
+
+If you want to use **device-relative poses**, please follow the instructions in the previous section and train our method from scratch. 
+
+Also, check out [UnrealEgo2 and UnrealEgo-RW](https://unrealego.mpi-inf.mpg.de/) for the implementation of device-relative pose estimation.
 
 ### Dependencies 
 
