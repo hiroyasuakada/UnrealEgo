@@ -20,6 +20,7 @@ UnrealEgo is based on an advanced concept of eyeglasses equipped with two fishey
 
 # Updates
 
+- 24/10/2024: Added instructions to obtain device-relative poses from UnrealEgo.
 - 27/02/2024: New datasets, UnrealEgo2 and UnrealEgo-RW, are released! UnrealEgo2 is fully compatible with UnrealEgo. Please check out [our benchmark page](https://unrealego.mpi-inf.mpg.de/).
 
 
