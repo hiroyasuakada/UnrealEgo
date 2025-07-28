@@ -10,12 +10,12 @@ UnrealEgo is based on an advanced concept of eyeglasses equipped with two fishey
 # Citation
 
 ```
-    @inproceedings{hakada2022unrealego,
-      title = {UnrealEgo: A New Dataset for Robust Egocentric 3D Human Motion Capture},
-      author = {Akada, Hiroyasu and Wang, Jian and Shimada, Soshi and Takahashi, Masaki and Theobalt, Christian and Golyanik, Vladislav},
-      booktitle = {European Conference on Computer Vision (ECCV)}, 
-      year = {2022}
-    } 
+@inproceedings{hakada2022unrealego,
+  title = {UnrealEgo: A New Dataset for Robust Egocentric 3D Human Motion Capture},
+  author = {Akada, Hiroyasu and Wang, Jian and Shimada, Soshi and Takahashi, Masaki and Theobalt, Christian and Golyanik, Vladislav},
+  booktitle = {European Conference on Computer Vision (ECCV)}, 
+  year = {2022}
+} 
 ```
 
 # Updates
