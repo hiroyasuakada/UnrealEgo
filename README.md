@@ -102,7 +102,7 @@ We provide metadata for each frame:
     - camera left/right pts2d: 2D keypoint location (X, Y) in the image coordinate system
 - **all_data_with_img-256_hm-64_pose-16_npy** (in UnrealEgo impl): this file contains preprocessed data used for faster training of our implementation for **pelvis-relative** pose estimation
     - rgb images (resized to 256 × 256 and normalized with ImageNet statistics, *i.e.*, mean=[0.485, 0.456, 0.406] and std=[0.229, 0.224, 0.225])
-    - heatmaps (64 × 64, generated from camera pts2d)
+    - heatmaps (64 × 64, generated from camera pts2d, check [this code](https://github.com/hiroyasuakada/EgoRear/blob/main/generate_heatmap.py) for more details)
     - pelvis-relative 3D pose with 16 keypoints listed [here](https://github.com/hiroyasuakada/UnrealEgo/blob/50c01042244ddf9270da9a28adfa534f60856327/utils/loss.py#L9) (generated from camera pts3d)
     - See our [dataloader](https://github.com/hiroyasuakada/UnrealEgo/blob/e3ba929345eb71f27bac1ce8d97e25e106cc3d47/dataloader/data_loader.py#L86-L90) for more details on how to load data
 
