@@ -112,7 +112,7 @@ Our camera calibration file is also available [here](https://github.com/hiroyasu
 
 Please first download the original dataset (**UnrealEgo 01 ~ 06**). Then, simply calculate the middle point between camera_left_pts3d and camera_right_pts3d.
 
->                 device_relative_pts3d = (camera_left_pts3d + camera_right_pts3d) / 2
+        device_relative_pts3d = (camera_left_pts3d + camera_right_pts3d) / 2
 
 Note that UnrealEgo is fully compatible with [UnrealEgo2](https://unrealego.mpi-inf.mpg.de/). This means that you can train your method on UnrealEgo2 and test it on UnrealEgo, and vice versa. 
 
